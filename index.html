@@ -1,0 +1,196 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#100d18">
+<title>LD Production Academy</title>
+<style>
+:root {
+  --bg:#100d18;
+  --surface:#1b1726;
+  --surface2:#241e32;
+  --violet:#a875ff;
+  --coral:#ff786b;
+  --white:#f8f5ff;
+  --muted:#aaa2b9;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--white);
+  font-family:Arial,Helvetica,sans-serif;line-height:1.6
+}
+header{
+  position:sticky;top:0;z-index:10;
+  background:#100d18ee;backdrop-filter:blur(14px);
+  border-bottom:1px solid #ffffff15;padding:15px 6%;
+  display:flex;justify-content:space-between;align-items:center
+}
+.logo{font-size:20px;font-weight:900;letter-spacing:1px}
+.logo span{color:var(--violet)}
+nav{display:flex;gap:22px;align-items:center}
+nav a{color:var(--muted);text-decoration:none;font-size:14px}
+nav a:hover{color:var(--coral)}
+.btn{
+  display:inline-block;border:0;border-radius:10px;
+  padding:12px 19px;font-weight:bold;text-decoration:none;
+  cursor:pointer;background:linear-gradient(110deg,var(--violet),var(--coral));
+  color:#160f20
+}
+.hero{
+  padding:85px 7% 75px;min-height:540px;
+  display:flex;align-items:center;
+  background:radial-gradient(ellipse at 85% 20%,#713cc333,transparent 45%),
+  radial-gradient(ellipse at 10% 90%,#ff786b18,transparent 40%)
+}
+.hero-content{max-width:750px}
+.eyebrow{color:var(--coral);font-weight:bold;letter-spacing:3px;font-size:12px}
+h1{font-size:clamp(38px,7vw,70px);line-height:1.08;margin:20px 0}
+h1 span{color:var(--violet)}
+.hero p{max-width:580px;color:var(--muted);font-size:17px;margin-bottom:28px}
+section{padding:65px 7%}
+.section-label{color:var(--coral);font-size:12px;font-weight:bold;letter-spacing:2px}
+h2{font-size:32px;margin:8px 0 12px}
+.intro{color:var(--muted);max-width:650px;margin-bottom:30px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{
+  background:var(--surface);border:1px solid #ffffff12;
+  border-radius:17px;padding:24px;transition:.2s
+}
+.card:hover{transform:translateY(-4px);border-color:var(--violet)}
+.symbol{font-size:30px;margin-bottom:12px}
+.card h3{margin-bottom:8px}
+.card p{color:var(--muted);font-size:14px}
+.tag{display:inline-block;color:var(--coral);font-size:12px;margin-top:17px}
+.community{
+  background:linear-gradient(120deg,#35204f,#211b30);
+  border:1px solid #a875ff44;border-radius:22px;padding:35px
+}
+.community p{color:#d0c6df;max-width:600px;margin:12px 0 22px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:35px}
+.stat{background:#ffffff09;border-radius:12px;padding:16px;text-align:center}
+.stat strong{display:block;color:var(--violet);font-size:25px}
+.stat small{color:var(--muted)}
+footer{padding:30px 7%;border-top:1px solid #ffffff15;color:var(--muted);font-size:13px}
+footer span{color:var(--coral)}
+.menu-button{display:none;background:none;color:white;border:0;font-size:25px}
+@media(max-width:650px){
+  header{padding:13px 5%}
+  nav{display:none;position:absolute;top:65px;left:0;right:0;
+      background:var(--surface);padding:20px;flex-direction:column}
+  nav.open{display:flex}
+  .menu-button{display:block}
+  .hero{padding:65px 7%;min-height:480px}
+  section{padding:50px 7%}
+  h2{font-size:27px}
+  .stats{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">LD <span>PRODUCTION</span></div>
+  <button class="menu-button" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+  <nav>
+    <a href="#accueil">Accueil</a>
+    <a href="#formations">Formations</a>
+    <a href="#communaute">Communauté</a>
+    <a href="#apropos">À propos</a>
+    <a class="btn" href="mailto:contact@ldproduction.com">Nous contacter</a>
+  </nav>
+</header>
+
+<main>
+<section class="hero" id="accueil">
+  <div class="hero-content">
+    <div class="eyebrow">APPRENDRE · CRÉER · INNOVER</div>
+    <h1>Transforme tes idées en <span>créations.</span></h1>
+    <p>
+      Bienvenue chez LD Production Academy, un espace dédié à la formation,
+      à la créativité et au développement des talents dans les métiers
+      de la production et du design.
+    </p>
+    <a class="btn" href="#formations">Découvrir les formations ↗</a>
+    <div class="stats">
+      <div class="stat"><strong>01</strong><small>Apprendre</small></div>
+      <div class="stat"><strong>02</strong><small>Pratiquer</small></div>
+      <div class="stat"><strong>03</strong><small>Créer</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="formations">
+  <div class="section-label">DÉVELOPPE TES COMPÉTENCES</div>
+  <h2>Nos domaines de formation</h2>
+  <p class="intro">
+    Découvre les univers créatifs et techniques que tu pourras explorer
+    au sein de notre académie.
+  </p>
+  <div class="cards">
+    <article class="card">
+      <div class="symbol">▧</div>
+      <h3>Tableaux PVC</h3>
+      <p>Découvre la création de tableaux personnalisés, la composition
+      photographique et les finitions professionnelles.</p>
+      <div class="tag">CRÉATION & IMPRESSION</div>
+    </article>
+    <article class="card">
+      <div class="symbol">✳</div>
+      <h3>Sérigraphie</h3>
+      <p>Apprends les techniques d'impression, la préparation des écrans
+      et la réalisation de tes propres productions.</p>
+      <div class="tag">TECHNIQUE & PRATIQUE</div>
+    </article>
+    <article class="card">
+      <div class="symbol">◈</div>
+      <h3>Sublimation & DTF</h3>
+      <p>Explore la personnalisation textile et les méthodes modernes
+      de transfert et d'impression.</p>
+      <div class="tag">PERSONNALISATION</div>
+    </article>
+    <article class="card">
+      <div class="symbol">✎</div>
+      <h3>Design graphique</h3>
+      <p>Développe ton imagination et apprends à concevoir des visuels
+      créatifs et professionnels.</p>
+      <div class="tag">ART & DESIGN</div>
+    </article>
+  </div>
+</section>
+
+<section id="communaute">
+  <div class="community">
+    <div class="section-label">ENSEMBLE, NOUS ALLONS PLUS LOIN</div>
+    <h2>Une communauté de créateurs.</h2>
+    <p>
+      Partage tes réalisations, découvre les créations des autres
+      apprenants et développe ton savoir-faire dans un environnement
+      qui encourage la progression et l'innovation.
+    </p>
+    <a class="btn" href="mailto:contact@ldproduction.com">Rejoindre l'académie</a>
+  </div>
+</section>
+
+<section id="apropos">
+  <div class="section-label">NOTRE VISION</div>
+  <h2>Apprendre aujourd'hui. Créer demain.</h2>
+  <p class="intro">
+    LD Production Academy ambitionne de rendre les compétences créatives
+    et techniques accessibles, en mettant l'accent sur la pratique,
+    le partage et l'évolution professionnelle.
+  </p>
+</section>
+</main>
+
+<footer>
+  <div class="logo">LD <span>PRODUCTION ACADEMY</span></div>
+  <p>© 2026 LD Production Academy. Tous droits réservés.</p>
+  <p>Apprendre · Créer · Innover</p>
+</footer>
+
+</body>
+  </html>
+  
